@@ -1,0 +1,66 @@
+body {
+  font: 14px/1.25 'Roboto', sans-serif;
+  background: #f7f7f7;
+}
+
+body a {
+  color: inherit;
+}
+
+body .navbar {
+  background: #f2f3f4 !important;
+  border-bottom: 1.20px solid #333;
+}
+
+body .navbar .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .navbar .header-container #my-nav {
+  width: 88vw !important;
+}
+
+body .navbar .header-container #my-nav .username {
+  color: inherit;
+  font-size: 14px;
+}
+
+body .navbar .header-container .header {
+  font-size: 26px;
+}
+
+body .tabs .nav {
+  border: unset;
+  color: #bbb;
+}
+
+body .tabs .nav .active {
+  border: unset;
+  border-bottom: 1.25px solid yellow !important;
+}
+
+body .tabs .nav .active #table .sort-title {
+  font-size: .15rem;
+}
+
+body .tabs #piechart #container {
+  min-width: 300px;
+  max-width: 800px;
+  height: 500px;
+  margin: 1em auto;
+}
+
+body .tabs #piechart #container .highcharts-data-label {
+  display: none;
+}
+
+body .tabs #piechart #container .highcharts-data-label-connector {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
