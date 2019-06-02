@@ -15,8 +15,8 @@
         integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
 
     <!-- fontawesome cdn -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- jquery slim minified js cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -79,25 +79,162 @@
             </nav>
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <div class="container">
-                        <div class="row">
-                            <div id="table" class="col-md-7">
-                                <div class="tab-head mt-3">
-                                    <h6>Construction Cost (Material + Labour)</h6>
-                                    <p class="sort-title">Costing in
-                                        <select name="rate" id="rate" class="rounded mr-2">
-                                            <option value="Rs/sqft">Rs/sqft</option>
-                                        </select>
-                                         Costing per
-                                        <select name="rate" id="rate" class="rounded">
-                                            <option value="Slab Area">Slab Area</option>
-                                        </select>
-                                    </p>
+                    <div class="row">
+                        <div id="table" class="col-md-8">
+                            <div class="tab-head mt-3 d-flex justify-content-between">
+                                <h6>Construction Cost (Material + Labour)</h6>
+                                <p class="sort-title ml-4">Costing in
+                                    <select name="rate" id="rate" class="rounded mr-2 px-2 py-1">
+                                        <option value="Rs/sqft">Rs/sqft</option>
+                                    </select>
+                                    Costing per
+                                    <select name="rate" id="rate" class="rounded  px-2 py-1">
+                                        <option value="Slab Area">Slab Area</option>
+                                    </select>
+                                </p>
+                            </div>
+
+                            <div class="accordion" id="myAccordion">
+                                <div class="card">
+                                    <button class="btn btn-link d-flex align-items-center" type="button"
+                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <div class="card-header w-100" id="headingOne">
+                                            <p class="accordion-title mb-1 mx-3">Eagle</p>
+                                            <p class="m-0 ml-4">Total Slab Area: 50,600 sqft</p>
+                                        </div>
+                                    </button>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#myAccordion">
+                                        <table id="thead" class="table table-light mt-2">
+                                            <colgroup>
+                                                <col style="width:25%">
+                                                <col style="width:25%">
+                                                <col style="width:10%">
+                                                <col style="width:25%">
+                                                <col style="width:10%">
+                                                <col style="width:5%">
+                                            </colgroup>
+                                            <tr>
+                                                <th rowspan="2">Cost Head</th>
+                                                <th colspan="2">By Thumbrule</th>
+                                                <th colspan="2">Estimated <span>(as per project quantities &
+                                                        rates)</span></th>
+                                                <th></th>
+                                            </tr>
+                                            <tr>
+                                                <td>Budgeted Cost</td>
+                                                <td>Rate/Sqft (Slab Area)</td>
+                                                <td>Estimated Cost</td>
+                                                <td>Rate/Sqft (Slab Area)</td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+
+                                        <table id="tbody" class="table table-light m-0">
+                                            <colgroup>
+                                                <col style="width:25%">
+                                                <col style="width:25%">
+                                                <col style="width:10%">
+                                                <col style="width:25%">
+                                                <col style="width:10%">
+                                                <col style="width:5%">
+                                            </colgroup>
+                                            <tr>
+                                                <td>Excavation</td>
+                                                <td>15,00,000 <a href="#"><i class="fas fa-pencil-alt"></i></a></td>
+                                                <td>30</td>
+                                                <td>16,55,000 <a href="#"><i class="fas fa-pencil-alt"></i></a></td>
+                                                <td>18</td>
+                                                <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Excavation</td>
+                                                <td>15,00,000<a href="#"><i class="fas fa-pencil-alt"></i></a></td>
+                                                <td>30</td>
+                                                <td>16,55,000 <a href="#"><i class="fas fa-pencil-alt"></i></a></td>
+                                                <td>18</td>
+                                                <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                                            </tr>
+                                        </table>
+                                        <button class="btn btn-light bg-white w-100 font-weight-bold m-0 py-2" type="button">add
+                                            item</button>
+                                        <table id="tfoot" class="table table-light m-0">
+                                            <colgroup>
+                                                <col style="width:25%">
+                                                <col style="width:25%">
+                                                <col style="width:10%">
+                                                <col style="width:25%">
+                                                <col style="width:10%">
+                                                <col style="width:5%">
+                                            </colgroup>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td>15,00,000</a></td>
+                                                <td>30</td>
+                                                <td></td>
+                                                <td>460</td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
                                 </div>
+                                <!-- <div class="card">
+                                    <button class="btn btn-link d-flex align-items-center" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                                        aria-controls="collapseTwo">
+                                        <div class="card-header w-100" id="headingOne">
+                                            <p class="accordion-title mb-1 mx-3">Eagle</p>
+                                            <p class="m-0 ml-4">Total Slab Area: 50,600 sqft</p>
+                                        </div>
+                                    </button>
+
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                        data-parent="#myAccordion">
+                                        <div class="card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                            helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                            proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                            beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                            haven't heard of them accusamus labore sustainable VHS.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <button class="btn btn-link d-flex align-items-center" type="button"
+                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <div class="card-header w-100" id="headingOne">
+                                            <p class="accordion-title mb-1 mx-3">Eagle</p>
+                                            <p class="m-0 ml-4">Total Slab Area: 50,600 sqft</p>
+                                        </div>
+                                    </button>
+
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                        data-parent="#myAccordion">
+                                        <div class="card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                            helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                            proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                            beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                            haven't heard of them accusamus labore sustainable VHS.
+                                        </div>
+                                    </div>
+                                </div> -->
                             </div>
-                            <div id="piechart" class="col-md-5">
-                                <div id="container"></div>
-                            </div>
+                        </div>
+                        <div id="piechart" class="col-md-4">
+                            <div id="container"></div>
                         </div>
                     </div>
                 </div>

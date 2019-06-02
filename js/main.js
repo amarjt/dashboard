@@ -52,3 +52,14 @@ Highcharts.chart('container', {
   $(".highcharts-legend").remove();
   $(".highcharts-credits").remove();
   
+// for Accordion 
+
+$(".card-header").click(function (e) { 
+  e.preventDefault();
+  $(".fa-caret-down").css({"transform": "rotate(180deg)"});
+});
+
+
+$(".card-header").on('click', function() {
+  $(this).toggleClass('is-active');
+});

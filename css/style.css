@@ -1,6 +1,6 @@
 body {
-  font: 14px/1.25 'Roboto', sans-serif;
-  background: #f7f7f7;
+  font: 14px/1 'Roboto', sans-serif;
+  background: #f7f7f7 !important;
 }
 
 body a {
@@ -9,7 +9,7 @@ body a {
 
 body .navbar {
   background: #f2f3f4 !important;
-  border-bottom: 1.20px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 body .navbar .header-container {
@@ -45,8 +45,191 @@ body .tabs .nav .active {
   border-bottom: 1.25px solid yellow !important;
 }
 
-body .tabs .nav .active #table .sort-title {
-  font-size: .15rem;
+body .tabs #table h6 {
+  line-height: 1.75;
+}
+
+body .tabs #table .sort-title {
+  font-size: .9rem;
+}
+
+body .tabs #table .table-light {
+  background: unset;
+}
+
+body .tabs #table #myAccordion .card {
+  margin-bottom: .5rem;
+  border: unset;
+  background: unset;
+}
+
+body .tabs #table #myAccordion .card .btn:focus {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+body .tabs #table #myAccordion .card .btn-link {
+  color: #fff;
+  padding: 0;
+}
+
+body .tabs #table #myAccordion .card .btn-link:hover {
+  text-decoration: none;
+}
+
+body .tabs #table #myAccordion .card .btn-link:focus {
+  text-decoration: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+body .tabs #table #myAccordion .card .btn-link .card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #27aae1;
+  border-radius: .25rem;
+}
+
+body .tabs #table #myAccordion .card .btn-link .card-header::before {
+  font-family: 'FontAwesome';
+  content: "\f0d8";
+  font-size: 1rem;
+}
+
+body .tabs #table #myAccordion .card .btn-link .card-header .accordion-title {
+  font-size: 2rem;
+  font-weight: lighter;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .tabs #table #myAccordion .card .btn-link .is-active::before {
+  font-family: 'FontAwesome';
+  font-size: 1rem;
+  content: "\f0d7";
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+body .tabs #table #myAccordion table {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+body .tabs #table #myAccordion table td,
+body .tabs #table #myAccordion table th {
+  color: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: unset;
+  background: #fff;
+  font-size: .9rem;
+  padding: .25rem;
+  border-right: 3px solid #f7f7f7;
+}
+
+body .tabs #table #myAccordion table tr td:first-child,
+body .tabs #table #myAccordion table tr th:first-child {
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+body .tabs #table #myAccordion table tr td:last-child,
+body .tabs #table #myAccordion table tr th:last-child {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+body .tabs #table #myAccordion #thead {
+  margin: 0;
+  border-collapse: collapse;
+}
+
+body .tabs #table #myAccordion #thead tr:nth-child(2) td,
+body .tabs #table #myAccordion #thead tr th span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+body .tabs #table #myAccordion #thead tr td:nth-child(odd) {
+  border: unset;
+}
+
+body .tabs #table #myAccordion #thead tr td,
+body .tabs #table #myAccordion #thead tr th:last-child {
+  border-radius: unset;
+}
+
+body .tabs #table #myAccordion #thead tr th:last-child {
+  border-top-right-radius: .25rem;
+  border: unset;
+}
+
+body .tabs #table #myAccordion #thead tr td:last-child {
+  border-bottom-right-radius: .25rem;
+}
+
+body .tabs #table #myAccordion #tbody tr td:nth-child(even) {
+  border: unset;
+}
+
+body .tabs #table #myAccordion #tbody td {
+  border-right: 2px solid #f7f7f7;
+  padding: .75rem;
+  text-align: right;
+}
+
+body .tabs #table #myAccordion #tbody td:nth-child(odd) {
+  text-align: center;
+}
+
+body .tabs #table #myAccordion #tbody td .fa-pencil-alt {
+  color: #fff;
+  font-size: .65rem;
+  margin-left: .5rem;
+  padding: .25rem;
+  background: #bbb;
+  border-radius: 50%;
+}
+
+body .tabs #table #myAccordion #tbody td .fa-pencil-alt:hover {
+  background: #555;
+}
+
+body .tabs #table #myAccordion #tbody td .fa-trash-alt {
+  padding: .15rem 0;
+  color: #bbb;
+}
+
+body .tabs #table #myAccordion #tbody td .fa-trash-alt:hover {
+  color: #555;
+}
+
+body .tabs #table #myAccordion #tbody td:first-child {
+  text-align: left;
+}
+
+body .tabs #table #myAccordion #tfoot td {
+  border: unset;
+  background: #27aae1;
+  color: #fff;
+  font-weight: bold;
+  padding: .75rem 0;
+}
+
+body .tabs #table #myAccordion #tfoot td:first-child {
+  text-align: left;
+  padding-left: .75rem;
+}
+
+body .tabs #table #myAccordion #tfoot td:nth-child(even) {
+  text-align: right;
+  padding-right: 2.25rem;
 }
 
 body .tabs #piechart #container {
